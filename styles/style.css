@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body *{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 160%;
+}
+
+body{
+    background-image: url(../imagens/Fundo.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+}
+
+header{
+    padding-top: 32px;
+    height: calc(120px + 32px);
+}
+
+header div{
+    width: 120px;
+    background-image: linear-gradient(90deg, #C91842 0%, #5CC2E2 100%);
+    border-radius: 50%;
+    
+    margin: auto;
+
+    display: flex;
+    padding: 4px;
+    
+    transition: transform .3s;
+
+}
+
+header div:hover{
+    transform: scale(1.1);
+}
+
+header img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+main{
+    width: 90%;
+    max-width: 520px;    
+    margin: 32px auto;
+
+    display: grid;
+    gap: 24px;
+
+    align-items: flex-start;
+}
+
+section{
+    color: white;
+    background-image: linear-gradient(90deg, #C91842 0%, #5CC2E2 100%);
+    padding-top: 4px;
+    border-radius: 8px; 
+}
+
+section div{
+    background-color: #262629;
+    border-radius: 8px;
+    padding: 32px;
+    padding-top: 24px;
+}
+
+section ul{
+    list-style: none;
+    display: flex;
+    gap: 16px;
+
+    margin-top: 24px;
+
+    flex-wrap: wrap;
+}
+
+section ul li{
+    transition: transform .3s;
+}
+
+section ul li:hover{
+    transform: scale(1.1);
+}
+
+section p{
+    letter-spacing: -0.18px;
+}
+
+.film_List img{
+    width: 100px;
+    border-radius: 8px;
+    border: 1px solid #555555;
+
+}
+
+.serie_List img{
+    width: 100px;
+    border-radius: 8px;
+    border: 1px solid #555555;
+
+}
+
+header div{
+    animation: fromTop .7s .2s backwards;
+}
+
+main section{
+    animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(1){
+    animation-delay: 0;
+}   
+
+main section:nth-child(2){
+    animation-delay: .4s;
+}  
+
+main section:nth-child(3){
+    animation-delay: .8s;
+}  
+
+@keyframes fromTop{
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
